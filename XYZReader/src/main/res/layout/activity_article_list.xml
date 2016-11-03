@@ -30,6 +30,7 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:stateListAnimator="@animator/appbar_always_elevated"
         >
 
         <android.support.v7.widget.Toolbar
@@ -57,4 +58,6 @@
 
 
     <!-- android:theme="@style/ActionBar.ThemeOverlay"-->
+
+    <!--http://stackoverflow.com/questions/37960282/appbarlayout-elevation-change-is-delayed-on-appcompat-v24-0-0 " appbar elevation-->
 

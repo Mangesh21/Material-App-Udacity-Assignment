@@ -6,11 +6,18 @@
 
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
-    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="text_toolbar">16dp</dimen>
 
     <dimen name="recycler_spacing">4dp</dimen>
+
+    <dimen name="appbar_elevation">4dp</dimen>
+
+    <dimen name="padding_small">4dp</dimen>
+    <!--Text-->
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_padding_article">16dp</dimen>
 
 </resources>
