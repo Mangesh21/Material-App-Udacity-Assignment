@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -73,6 +74,7 @@ public class ArticleDetailFragment extends Fragment implements
 
         setHasOptionsMenu(true);
 
+
     }
 
     public ArticleDetailActivity getActivityCast() {
@@ -111,6 +113,7 @@ public class ArticleDetailFragment extends Fragment implements
         });
 
         bindViews();
+
         return mRootView;
     }
 
@@ -122,7 +125,7 @@ public class ArticleDetailFragment extends Fragment implements
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         bylineView.setMovementMethod(new LinkMovementMethod());
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
-        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
+        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Roboto-Regular.ttf"));
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
@@ -147,6 +150,10 @@ public class ArticleDetailFragment extends Fragment implements
                             Bitmap bitmap = imageContainer.getBitmap();
                             if (bitmap != null) {
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
+
+                                Snackbar.make(mRootView, getString(R.string.swipe_message), Snackbar.LENGTH_LONG).
+                                        setDuration(3000).
+                                        show();
                             }
                         }
 
@@ -155,6 +162,7 @@ public class ArticleDetailFragment extends Fragment implements
 
                         }
                     });
+
         }
     }
 
