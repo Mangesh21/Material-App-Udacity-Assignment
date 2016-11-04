@@ -155,11 +155,6 @@ public class ArticleDetailFragment extends Fragment implements
 
                         }
                     });
-        } else {
-            mRootView.setVisibility(View.GONE);
-            mCollapsingToolbarLayout.setTitle("N/A");
-            bylineView.setText("N/A");
-            bodyView.setText("N/A");
         }
     }
 
