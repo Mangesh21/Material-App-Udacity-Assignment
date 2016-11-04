@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:stateListAnimator="@animator/appbar_always_elevated"
         android:fitsSystemWindows="true">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -24,6 +25,7 @@
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
             app:expandedTitleGravity="left|bottom"
+            app:collapsedTitleGravity="left"
             android:fitsSystemWindows="true">
 
             <ImageView
@@ -39,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:contentInsetStartWithNavigation="0dp"
                 app:layout_collapseMode="pin" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
